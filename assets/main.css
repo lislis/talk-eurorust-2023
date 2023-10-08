@@ -150,3 +150,7 @@ small {
 .resources {
   font-size: 0.5em;
 }
+
+.invert {
+  color: #181818;
+}
