@@ -20,7 +20,7 @@
       # $ whoami
 
       --
-    
+
       lislis
 
       ---
@@ -164,19 +164,19 @@
       layout: false
       class: middle
 
-      ## Possible definitions:
+      Possible definitions:
 
       --
 
-      Using uncommon or custom controllers
+      ## Using uncommon or custom controllers
 
       --
 
-      ## or
+       or
 
       --
 
-      Using common controllers in a unusual way
+      ## Using common controllers in a unusual way
 
       ---
 
@@ -192,7 +192,11 @@
 
       class: middle
 
-      The alt.ctrl scene seems small?
+      Your first time hearing about alt.ctrl?
+
+      --
+
+      This seems very nice and very small?
 
       --
 
@@ -317,45 +321,51 @@
 
       ---
 
-      @TODO a little more about the game
+      class: center, middle
 
+      ## Okay, step by step
+
+      ---
+      background-image: url(assets/plan1.png)
+      ---
+      background-image: url(assets/plan2.png)
+      ---
+      background-image: url(assets/plan3.png)
+      ---
+      background-image: url(assets/plan4.png)
+      ---
+      background-image: url(assets/plan5.png)
+      ---
+      background-image: url(assets/plan6.png)
+      ---
+      background-image: url(assets/plan7.png)
+      ---
+      background-image: url(assets/plan8.png)
+      ---
+      background-image: url(assets/plan9.png)
       ---
 
       ## How?
 
-      @TODO more about each decision
+      --
+
+      - Main game written with [bevy game engine](https://bevyengine.org/)
 
       --
 
-      - Main game written with [bevy](https://bevyengine.org/)
-
-      --
-
-      - Bike handle equipped with an [rust esp board](https://github.com/esp-rs/esp-rust-board/tree/v1.2)
+      - Bike handle equipped with an [ESP32 microcontroller](https://github.com/esp-rs/esp-rust-board/tree/v1.2)
 
       --
 
       - Raspberry Pi as main brain
 
+      ---
+
+      ## Bevy
+
       --
 
-      - Plywood case and screen to house everything
-
-      ---
-
-      ## How?
-
-      - Main game written with [bevy](https://bevyengine.org/)
-
-      - Bike handle equipped with an [rust esp board](https://github.com/esp-rs/esp-rust-board/tree/v1.2)
-
-      - Raspberry Pi as main brain
-
-      - ~~Plywood case and screen to house everything~~ (not yet)
-
-      ---
-
-      ## Bevy experience
+      - Heard a lot about it, wanted to try it
 
       --
 
@@ -375,73 +385,165 @@
 
       ---
 
-      ## ESP32 experience
+      ## Anecdote 1
 
       --
 
-      - Hard to find the right resources if you're a beginner/ hobbyist 😢
+      I want to directly read serial from the esp32 🤔
+
+      --
+
+      -> there is a plugin, bevy_serial 🥳
+
+      --
+
+      -> bevy_serial was no longer compatible with current bevy version (0.11) 😢
+
+      --
+
+      -> Have game and board communicate over wifi 💡
+
+      --
+
+      -> Write esp32 webserver, change game logic to poll from url (bevy_reqwest) 🐱‍💻
+
+      --
+
+      -> Wireless controller 🤯 but how to power it 🤔
+
+      ---
+
+      background-size: 60%
+      background-position: center center
+      background-image: url(assets/bevy_serial.png)
+      ---
+
+      ## Anecdote 1
+
+      I want to directly read serial from the esp32 🤔
+
+      -> there is a plugin, bevy_serial 🥳
+
+      -> ~~bevy_serial was no longer compatible with current bevy version (0.11) 😢~~
+
+      -> ~~Have game and board communicate over wifi 💡~~
+      
+      -> ~~Write esp32 webserver, change game logic to poll from url (bevy_reqwest) 🐱‍💻~~
+      
+      -> ~~Wireless controller 🤯 but how to power it 🤔~~
+      ---
+
+      ## ESP32
+      --
+
+      - Standard in the Arduino environment
+
+      --
+
+      - Is Rust on ESP32 hobbyist ready? 🤷
+
+      --
+    
+      - Read [this article](https://www.linkedin.com/pulse/embedded-rust-esp32c3-board-hands-on-quickstart-guide-cyril-marpaud) and wanted to check out [ESP-IDF template](https://github.com/esp-rs/esp-idf-template) and [espflash](https://github.com/esp-rs/espflash)
 
       --
 
       -> Start with [esp-rs/std-training](https://esp-rs.github.io/std-training/)
 
-      --
+      ---
 
-      - ESP32-C3-DevKit-Rust-1 comes with cool stuff on the board 🤩 but is kinda pricey 😢
-
-      @TODO name the price
+      ## Anecdote 2
 
       --
 
-      - The tooling with espflash is AMAZING 🤩
+      ESP32-C3-DevKit-Rust-1 comes with cool stuff on the board 🤩 but is kinda pricey 😢
+
+      --
+      
+      -> Browsing for a cheap reseller
+      --
+
+      -> Board arrives! Setting up the environment 🐱‍💻
+
+      --
+
+      -> Tooling is awesome 🤩 but I could not get the sensor reading examples to work 🤔
+
+      --
+
+      -> Research, trying to find out what's wrong 🐱‍💻
+
+      --
+
+      -> Accidentally bought the wrong esp32-c3 board 🤦
 
       ---
 
-      ## Anecdotes pt1
-
-      --
-
-      I wanted to directly read serial from the esp32
-
-      --
-
-      -> bevy_serial was no longer compatible
-
-      --
-
-      -> Have game and board communicate over wifi
-
-      --
-
-      -> Wireless controller 💡, but power supply for the controller 🤔
+      background-size: 40%
+      background-position: center center
+      background-image: url(assets/boards.jpg)
 
       ---
 
-      ## Anecdotes pt2
+      ## Anecdote 2
+
+      -> Use different esp32 and gyroscope module and fall back to Arduino setup 🫣 
 
       --
 
-      I could not get the sensor reading examples to work on the esp
+      -> Order correct board, wait for it to arrive, start again
 
       --
 
-      -> Accidentally bought the wrong esp32-c3 board
-
-      --
-
-      -> Used different esp32 and gyroscope module and fall back to Arduino setup
+      BUT the espflash workflow is still amazing!
 
       ---
 
-      ## Anecdotes pt3
+      ## Raspberry Pi 
 
       --
 
-      I want 3d environments and benefit from Blender - Bevy compatibility
+      - Nice to run stuff on for installations etc 
 
       --
 
-      -> Need to learn Blender first
+      - Cross-compiling is easy! 🤓
+
+      --
+
+      - ... if you don't have external dependencies 🙀
+
+      ---
+
+      ## Raspberry Pi / Anecdote 3
+
+      - Nice to run stuff on for installations etc 
+
+      - Cross-compiling is easy! 🤓
+
+      - ... if you don't have external dependencies 🙀
+
+      ---
+
+      background-size: 40%
+      background-position: center center
+      background-image: url(assets/alice.gif)
+
+      ---
+
+      ## Raspberry Pi / Anecdote 3
+
+      - Found out about [cross-rs/cross](https://github.com/cross-rs/cross)
+
+      --
+
+      - So close to configuring it correctly 🤪
+
+      ---
+
+      class: center, middle
+
+      # 😤
 
       ---
 
@@ -451,7 +553,7 @@
 
       --
 
-      We are game,<br> but you have to make the controllers work!
+      We are game,<br> but you have to make the rest work by yourself!
 
       ---
 
@@ -460,11 +562,23 @@
 
       ## Bevy
 
+      - [GitHub] [bevy-examples](https://github.com/bevyengine/bevy/tree/main/examples)
+      - [YouTube] [@logicprojects](https://www.youtube.com/@logicprojects)
+      - [YouTube] [Bevy 3d Third Person Tutorial](https://www.youtube.com/watch?v=DtuqZ11RhIc&list=PLp0sjyxOq4ATFgiJ4HL8ok9Yp2h7Hz1Fb)
+      - [YouTube] [Blender to Bevy: components editing & export workflow + tooling !](https://www.youtube.com/watch?v=-lcScjQCA3c)
+
       ## ESP32
 
-      ## Misc
-      ]
+      - [Embedded Rust on ESP32C3 Board, a Hands-on Quickstart Guide](https://www.linkedin.com/pulse/embedded-rust-esp32c3-board-hands-on-quickstart-guide-cyril-marpaud)
+      - [GitHub] [esp-rs/std-training](https://esp-rs.github.io/std-training/)
+      - [GitHub] [esp-rs/esp-idf-template](https://github.com/esp-rs/esp-idf-template)
+      - [GitHub] [ivmarkov/rust-esp32-std-demo](https://github.com/ivmarkov/rust-esp32-std-demo)
 
+      ## Misc
+      - [Compile Rust for Raspberry Pi ARM](https://medium.com/swlh/compiling-rust-for-raspberry-pi-arm-922b55dbb050)
+      - [Cross compiling Rust apps Raspi Pi](https://capnfabs.net/posts/cross-compiling-rust-apps-raspberry-pi/)
+      - [GitHub] [cross-rs/cross wiki](https://github.com/cross-rs/cross/wiki/Configuration)
+      ]
       ---
 
       class: center, bottom
