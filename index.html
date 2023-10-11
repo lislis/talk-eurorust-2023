@@ -11,7 +11,7 @@
 
       # .title[alt.ctrl games w/ Rust]
 
-      Lisa '[lislis](https://lislis.de)' Passing at [EuroRust](https://eurorust.eu) October 2023
+      Lisa '[lislis](https://lislis.de)' Passing - [EuroRust](https://eurorust.eu) -  October 2023
 
       ---
 
@@ -19,7 +19,14 @@
 
       # $ whoami
 
-      --
+      ---
+
+      class: middle
+      background-image: url(assets/ed2.gif)
+      background-size: 10%
+      background-position: 75% center
+
+      # $ whoami
 
       lislis
 
@@ -196,7 +203,7 @@
 
       --
 
-      This seems very nice and very small?
+      This seems nice but very niche?
 
       --
 
@@ -241,8 +248,8 @@
       ---
 
       background-image: url(assets/tina.webp)
-      background-position: center 15%
-      background-size: 50%
+      background-position: center center
+      background-size: 46%
       class: center, middle
 
       --
@@ -357,7 +364,7 @@
 
       --
 
-      - Raspberry Pi as main brain
+      - Raspberry Pi to run everything
 
       ---
 
@@ -393,11 +400,11 @@
 
       --
 
-      -> there is a plugin, bevy_serial 🥳
+      -> There is a plugin, bevy_serial 🥳
 
       --
 
-      -> bevy_serial was no longer compatible with current bevy version (0.11) 😢
+      -> bevy_serial is no longer compatible with current bevy version (0.11) 😢
 
       --
 
@@ -405,7 +412,7 @@
 
       --
 
-      -> Write esp32 webserver, change game logic to poll from url (bevy_reqwest) 🐱‍💻
+      -> Write esp32 webserver, change game logic to poll from url (bevy_reqwest) 💻
 
       --
 
@@ -422,14 +429,14 @@
 
       I want to directly read serial from the esp32 🤔
 
-      -> there is a plugin, bevy_serial 🥳
+      -> There is a plugin, bevy_serial 🥳
 
       -> ~~bevy_serial was no longer compatible with current bevy version (0.11) 😢~~
 
       -> ~~Have game and board communicate over wifi 💡~~
-      
-      -> ~~Write esp32 webserver, change game logic to poll from url (bevy_reqwest) 🐱‍💻~~
-      
+
+      -> ~~Write esp32 webserver, change game logic to poll from url (bevy_reqwest) 🐱💻~~
+
       -> ~~Wireless controller 🤯 but how to power it 🤔~~
       ---
 
@@ -443,12 +450,12 @@
       - Is Rust on ESP32 hobbyist ready? 🤷
 
       --
-    
+
       - Read [this article](https://www.linkedin.com/pulse/embedded-rust-esp32c3-board-hands-on-quickstart-guide-cyril-marpaud) and wanted to check out [ESP-IDF template](https://github.com/esp-rs/esp-idf-template) and [espflash](https://github.com/esp-rs/espflash)
 
       --
 
-      -> Start with [esp-rs/std-training](https://esp-rs.github.io/std-training/)
+      - Start with [esp-rs/std-training](https://esp-rs.github.io/std-training/)
 
       ---
 
@@ -459,19 +466,20 @@
       ESP32-C3-DevKit-Rust-1 comes with cool stuff on the board 🤩 but is kinda pricey 😢
 
       --
-      
-      -> Browsing for a cheap reseller
-      --
 
-      -> Board arrives! Setting up the environment 🐱‍💻
+      -> Browsing for a cheap reseller, found really good offer
 
       --
 
-      -> Tooling is awesome 🤩 but I could not get the sensor reading examples to work 🤔
+      -> Board arrives! Setting up the environment 💻
 
       --
 
-      -> Research, trying to find out what's wrong 🐱‍💻
+      -> Tooling is awesome 🤩 but I could not get the sensor reading examples to work 😢
+
+      --
+
+      -> Research, trying to find out what's wrong 🤔
 
       --
 
@@ -487,7 +495,7 @@
 
       ## Anecdote 2
 
-      -> Use different esp32 and gyroscope module and fall back to Arduino setup 🫣 
+      -> Use different esp32 and gyroscope/accelerometer and fall back to Arduino setup 🫣
 
       --
 
@@ -499,11 +507,11 @@
 
       ---
 
-      ## Raspberry Pi 
+      ## Raspberry Pi
 
       --
 
-      - Nice to run stuff on for installations etc 
+      - Nice to run stuff on for installations in physical spaces
 
       --
 
@@ -517,7 +525,7 @@
 
       ## Raspberry Pi / Anecdote 3
 
-      - Nice to run stuff on for installations etc 
+      - Nice to run stuff on for installations etc
 
       - Cross-compiling is easy! 🤓
 

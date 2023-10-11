@@ -49,6 +49,10 @@ html, body {
   color: #bbb;
 }
 
+h1, h2, h3 {
+  font-weight: 400;
+}
+
 
 .hidden {
   visibility: hidden;
